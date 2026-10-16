@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | ConnectHub</title>
+
+    <link rel="stylesheet" href="/css/auth.css">
+    <script src="/js/auth.js" defer></script>
+</head>
+<body>
+    <main class="auth-container">
+        <section class="auth-card">
+            <a class="brand" href="/">Connect<span>Hub</span></a>
+
+            <div class="auth-heading">
+                <h1>Create your account</h1>
+                <p>Join your community. Start connecting.</p>
+            </div>
+
+            <form id="registerForm">
+                <label for="displayName">Full name</label>
+                <input
+                    id="displayName"
+                    name="displayName"
+                    type="text"
+                    maxlength="60"
+                    autocomplete="name"
+                    placeholder="Your full name"
+                    required
+                >
+
+                <label for="username">Username</label>
+                <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    minlength="3"
+                    maxlength="30"
+                    pattern="[A-Za-z0-9_]+"
+                    autocomplete="username"
+                    placeholder="Choose a username"
+                    required
+                >
+
+                <label for="email">Email address</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    maxlength="254"
+                    autocomplete="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    minlength="12"
+                    maxlength="72"
+                    autocomplete="new-password"
+                    placeholder="At least 12 characters"
+                    required
+                >
+
+                <button type="submit" id="registerButton">
+                    Create account
+                </button>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="auth-footer">
+                Already have an account?
+                <a href="/login">Log in</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
